@@ -4,7 +4,7 @@ import { getAllPosts, getPostById } from "../../lib/ghost.js";
 export async function getStaticPaths() {
   const posts = await getAllPosts();
   const paths = posts.map(({ id }) => ({ params: { id } }));
-  return { paths, fallback: blocking };
+  return { paths, fallback: "blocking" };
 }
 
 // fetch post data
