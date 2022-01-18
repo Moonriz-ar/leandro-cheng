@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <nav className="fixed top-0 flex justify-between w-screen px-4 py-4 text-sm font-bold z-15 text-slate-200">
+    <nav className="fixed top-0 flex justify-between w-screen px-4 py-4 text-sm font-bold z-10 text-slate-200">
       <div className="">
         <Link href="/">
           <a className="inline-block hover:text-slate-100">
