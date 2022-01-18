@@ -1,15 +1,12 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <>
-      <h1>Homepage</h1>
-      <h2>
-        Check out the{" "}
-        <Link href="/blog">
-          <a>blog</a>
-        </Link>
-      </h2>
+      <header className="">
+        <h3>探索中南美洲</h3>
+      </header>
     </>
   );
 }

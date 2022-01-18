@@ -1,23 +1,27 @@
 import Link from "next/link";
-import Image from "next/image";
 
 const Navbar = () => {
   return (
-    <nav className="grid grid-cols-12 py-3 bg-teal-600 text-white font-bold">
-      <div className="col-start-2 col-end-auto">
+    <nav className="fixed top-0 flex justify-between w-screen px-4 py-4 text-sm font-bold z-15 text-slate-200">
+      <div className="">
         <Link href="/">
-          <a className="whitespace-nowrap">Leandro Cheng 中南美深度攝影</a>
+          <a className="inline-block hover:text-slate-100">
+            Leandro Cheng{" "}
+            <span className="hidden md:inline">中南美深度攝影</span>
+          </a>
         </Link>
       </div>
-      <div className="col-start-auto col-end-11 whitespace-nowrap">
+      <div className="inline-block ">
         <Link href="/blog">
-          <a className="ml-7">部落格</a>
+          <a className="ml-3 hover:text-slate-100">部落格</a>
         </Link>
         <Link href="/about">
-          <a className="ml-7">關於版主</a>
+          <a className="ml-3 hover:text-slate-100">關於版主</a>
         </Link>
         <Link href="/guide-service">
-          <a className="ml-7">攝影嚮導</a>
+          <a className="px-1 py-2 ml-3 transition duration-150 ease-in rounded text-slate-200 hover:text-slate-100">
+            攝影嚮導
+          </a>
         </Link>
       </div>
     </nav>
