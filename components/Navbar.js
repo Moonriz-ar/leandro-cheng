@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <nav className="fixed top-0 flex justify-between w-screen px-4 py-3 font-extrabold z-20 text-gray-900 bg-gray-50 text-sm drop-shadow">
+    <nav className="fixed top-0 flex justify-between w-screen px-4 py-3 font-extrabold z-20 text-gray-800 bg-gray-50 text-sm drop-shadow">
       <div className="">
         <Link href="/">
           <a className="inline-block hover:text-gray-600">
@@ -19,7 +19,7 @@ const Navbar = () => {
           <a className="ml-3 hover:text-gray-600">關於版主</a>
         </Link>
         <Link href="/guide-service">
-          <a className="px-1 py-2 ml-3 transition duration-150 ease-in rounded text-gray-800 hover:text-gray-700">
+          <a className="px-3 py-1 ml-3 transition duration-150 ease-in rounded text-gray-800 hover:text-gray-700 border border-gray-400">
             攝影嚮導
           </a>
         </Link>

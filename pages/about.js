@@ -10,7 +10,7 @@ export async function getStaticProps() {
 const About = ({ page }) => {
   return (
     <>
-      <section className="flex flex-col justify-center pb-10 bg-gray-100 mt-20">
+      <section className="flex flex-col justify-center pb-10 bg-gray-100 mt-10">
         <Image
           src={profilePic}
           alt="photo of Leandro Cheng"
