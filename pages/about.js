@@ -1,18 +1,26 @@
-// import { getSinglePage } from "../lib/ghost.js";
+import Image from "next/image";
+import profilePic from "../public/images/profile.jpg";
+import { getSinglePage } from "../lib/ghost";
 
-const About = () => {
+export async function getStaticProps() {
+  const page = await getSinglePage("guan-yu-ban-zhu");
+  return { props: { page } };
+}
+
+const About = ({ page }) => {
   return (
     <>
-      <h1>About me</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
-      </p>
+      <section className="flex flex-col justify-center pb-10 bg-gray-100 mt-20">
+        <Image
+          src={profilePic}
+          alt="photo of Leandro Cheng"
+          className="w-auto h-auto min-w-full min-h-full object-cover object-top"
+        />
+        <article className="bg-gray-50 p-5 rounded-lg -mt-8 z-10 mx-4 drop-shadow-lg prose prose-sm">
+          <h1 className="text-center">{page.title}</h1>
+          <div dangerouslySetInnerHTML={{ __html: page.html }}></div>
+        </article>
+      </section>
     </>
   );
 };
