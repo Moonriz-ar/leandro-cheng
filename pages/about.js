@@ -1,4 +1,4 @@
-import 
+// import { getSinglePage } from "../lib/ghost.js";
 
 const About = () => {
   return (
