@@ -9,7 +9,7 @@ const Profile = () => {
         alt="photo of Leandro Cheng"
         className="w-auto h-auto min-w-full min-h-full object-cover object-top"
       />
-      <div className="bg-gray-50 text-gray-800 p-5 text-sm rounded-lg -mt-8 z-10 mx-4 drop-shadow-lg">
+      <div className="bg-gray-50 text-gray-700 p-5 rounded-lg -mt-8 z-10 mx-4 drop-shadow-lg">
         <h2 className="font-bold text-base mb-5 text-center">
           Leandro Cheng，鄭乃豪。
         </h2>

@@ -1,3 +1,4 @@
+import BlogPost from "../../components/BlogPost.js";
 import { getAllPosts, getPostBySlug } from "../../lib/ghost.js";
 
 // automatically generate path
@@ -10,16 +11,15 @@ export async function getStaticPaths() {
 // fetch post data
 export async function getStaticProps({ params }) {
   const { slug } = params;
-  const data = await getPostBySlug(slug);
-  return { props: { data }, revalidate: 30 };
+  const post = await getPostBySlug(slug);
+  return { props: { post }, revalidate: 30 };
 }
 
 // render each post page component
-export default function Post({ data }) {
+export default function Post({ post }) {
   return (
-    <article className="prose prose-img:rounded-xl">
-      <h1>{data.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: data.html }} />
-    </article>
+    <>
+      <BlogPost post={post} />
+    </>
   );
 }

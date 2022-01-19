@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <header className="text-sm w-full h-screen bg-center bg-no-repeat bg-cover bg-[url('/images/hero-image-mobile.webp')] md:bg-[url('/images/hero-image-desktop.webp')] text-gray-200">
+    <header className="w-full h-screen bg-center bg-no-repeat bg-cover bg-[url('/images/hero-image-mobile.webp')] md:bg-[url('/images/hero-image-desktop.webp')] text-gray-200">
       <div className="w-4/5 h-full mx-auto flex flex-col items-center justify-end pb-16">
         <h3 className="mb-5 text-base font-extrabold">
           阿根廷 及 中南美 深度攝影

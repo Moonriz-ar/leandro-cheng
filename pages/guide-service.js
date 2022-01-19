@@ -1,9 +1,10 @@
 import Image from "next/image";
+import Card from "../components/Card";
 import { getSinglePage } from "../lib/ghost";
 
 export async function getStaticProps() {
   const page = await getSinglePage("zhuan-ye-she-ying-xiang-dao");
-  return { props: { page } };
+  return { props: { page }, revalidate: 30 };
 }
 
 const GuideService = ({ page }) => {
@@ -16,10 +17,7 @@ const GuideService = ({ page }) => {
           width={1000}
           height={750}
         />
-        <article className="bg-gray-50 p-5 rounded-lg -mt-8 z-10 mx-4 drop-shadow-lg prose prose-sm">
-          <h1 className="text-center">{page.title}</h1>
-          <div dangerouslySetInnerHTML={{ __html: page.html }}></div>
-        </article>
+        <Card content={page} />
       </section>
     </>
   );
