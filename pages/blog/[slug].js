@@ -8,7 +8,7 @@ export async function getStaticPaths() {
   return { paths, fallback: "blocking" };
 }
 
-// fetch post data
+// fetch post data, ISR
 export async function getStaticProps({ params }) {
   const { slug } = params;
   const post = await getPostBySlug(slug);
