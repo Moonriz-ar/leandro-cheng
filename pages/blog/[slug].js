@@ -1,4 +1,4 @@
-import BlogPost from "../../components/BlogPost.js";
+import BlogPost from "../../components/Blog/BlogPost.js";
 import { getAllPosts, getPostBySlug } from "../../lib/ghost.js";
 
 // automatically generate path
