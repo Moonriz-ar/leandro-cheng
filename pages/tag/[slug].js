@@ -23,20 +23,22 @@ export async function getStaticProps({ params }) {
 // render tag page
 export default function Tag({ posts, tagData }) {
   return (
-    <>
+    <section className="flex flex-col justify-center pb-10 mt-10 bg-gray-100">
       <h1>{tagData.name}</h1>
       <p>A collection of {tagData.count.posts} posts</p>
       <ul>
-        {posts.map((post) => {
-          return (
-            <li key={post.id}>
-              <Link href={`/blog/${post.slug}`}>
-                <a>{post.title}</a>
-              </Link>
-            </li>
-          );
-        })}
+        {posts
+          ? posts.map((post) => {
+              return (
+                <li key={post.id}>
+                  <Link href={`/blog/${post.slug}`}>
+                    <a>{post.title}</a>
+                  </Link>
+                </li>
+              );
+            })
+          : null}
       </ul>
-    </>
+    </section>
   );
 }

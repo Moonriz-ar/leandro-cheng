@@ -1,10 +1,10 @@
 import Link from "next/link";
-import { countryNavLinks, categoryNavLinks } from "./NavLinks";
+import { countryNavLinks, categoryNavLinks } from "../../lib/NavLinks";
 
 const SecondaryNav = () => {
   const renderLinks = (array) => {
     return array.map((items) => (
-      <Link href={items.path}>
+      <Link href={`/tag/${items.path}`}>
         <a className="py-1">{items.name}</a>
       </Link>
     ));
