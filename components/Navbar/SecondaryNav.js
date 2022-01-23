@@ -28,7 +28,12 @@ const SecondaryNav = () => {
           </span>
           探索
         </h3>
-        <div className="flex flex-col">{renderLinks(categoryNavLinks)}</div>
+        <div className="flex flex-col">
+          {renderLinks(categoryNavLinks)}
+          <Link href="/blog">
+            <a className="py-1">所有文章</a>
+          </Link>
+        </div>
       </section>
     </nav>
   );
