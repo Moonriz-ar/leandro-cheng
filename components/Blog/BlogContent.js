@@ -1,8 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
 
-import profilePic from "../../public/images/profile-rectangle.jpg";
 import BlogInfo from "./BlogInfo";
 
 const BlogContent = ({ content }) => {

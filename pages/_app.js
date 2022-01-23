@@ -1,9 +1,9 @@
 import Layout from "../components/Layout";
 import "../styles/globals.css";
 
-export default function App({ Component, pageProps }) {
+export default function App({ Component, pageProps, countryPages }) {
   return (
-    <Layout>
+    <Layout countryPages={countryPages}>
       <Component {...pageProps} />
     </Layout>
   );
