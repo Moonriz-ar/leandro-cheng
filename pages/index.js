@@ -1,9 +1,17 @@
 import Head from "next/head";
+import FeaturedPosts from "../components/home/FeaturedPosts";
 
 import Hero from "../components/home/Hero";
 import Profile from "../components/home/Profile";
 
-export default function Home() {
+import { getFeaturedPost } from "../lib/ghost";
+
+export async function getStaticProps() {
+  const posts = await getFeaturedPost(6);
+  return { props: { posts }, revalidate: 30 };
+}
+
+export default function Home({ posts }) {
   return (
     <div className="bg-gray-100">
       <Head>
@@ -11,9 +19,8 @@ export default function Home() {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <Hero />
-      <section>
-        <Profile />
-      </section>
+      <Profile />
+      <FeaturedPosts featuredPosts={posts} />
     </div>
   );
 }
