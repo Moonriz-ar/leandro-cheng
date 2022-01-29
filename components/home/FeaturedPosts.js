@@ -6,7 +6,7 @@ const FeaturedPosts = ({ featuredPosts }) => {
       <h2 className="px-5 text-2xl font-extrabold">/ 推薦文章</h2>
       <section>
         {featuredPosts.map((post) => (
-          <Card content={post} />
+          <Card content={post} key={post.id} />
         ))}
       </section>
     </section>

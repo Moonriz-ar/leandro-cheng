@@ -1,4 +1,5 @@
 import Head from "next/head";
+import BlogCategories from "../components/home/BlogCategories";
 import FeaturedPosts from "../components/home/FeaturedPosts";
 
 import Hero from "../components/home/Hero";
@@ -21,6 +22,7 @@ export default function Home({ posts }) {
       <Hero />
       <Profile />
       <FeaturedPosts featuredPosts={posts} />
+      <BlogCategories />
     </div>
   );
 }
