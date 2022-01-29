@@ -3,7 +3,7 @@ import Script from "next/script";
 
 const Footer = () => {
   return (
-    <footer className="sticky top-full">
+    <footer className="sticky pt-3 bg-gray-100 top-full">
       <Script
         src="https://kit.fontawesome.com/3552e4e004.js"
         crossorigin="anonymous"
