@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 const PageContent = ({ content }) => {
   return (
     <article className="z-10 p-5 mx-4 -mt-8 prose rounded-lg bg-gray-50 drop-shadow-lg">

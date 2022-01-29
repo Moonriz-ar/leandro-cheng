@@ -1,4 +1,6 @@
-import Link from "next/link";
+import Head from "next/head";
+import Card from "../../components/Card";
+
 import {
   getAllTags,
   getAllPostsByTagSlug,
@@ -24,21 +26,20 @@ export async function getStaticProps({ params }) {
 export default function Tag({ posts, tagData }) {
   return (
     <section className="flex flex-col justify-center pb-10 mt-10 bg-gray-100">
-      <h1>{tagData.name}</h1>
-      <p>A collection of {tagData.count.posts} posts</p>
-      <ul>
+      <Head>
+        <title>{tagData.name}</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+
+      <section className="mt-10">
+        <h1 className="px-5 text-2xl font-extrabold">/ {tagData.name}文章</h1>
+      </section>
+
+      <section>
         {posts
-          ? posts.map((post) => {
-              return (
-                <li key={post.id}>
-                  <Link href={`/blog/${post.slug}`}>
-                    <a>{post.title}</a>
-                  </Link>
-                </li>
-              );
-            })
+          ? posts.map((post) => <Card content={post} key={post.id} />)
           : null}
-      </ul>
+      </section>
     </section>
   );
 }

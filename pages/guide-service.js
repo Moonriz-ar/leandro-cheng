@@ -1,15 +1,17 @@
 import Image from "next/image";
 import Head from "next/head";
 
-import { getSinglePage } from "../lib/ghost";
+import { getSinglePage, getAllPostsByTagSlug } from "../lib/ghost";
 import PageContent from "../components/PageContent";
+import Card from "../components/Card";
 
 export async function getStaticProps() {
   const page = await getSinglePage("zhuan-ye-she-ying-xiang-dao");
-  return { props: { page }, revalidate: 30 };
+  const posts = await getAllPostsByTagSlug("tour-guide-road-trip", 5);
+  return { props: { page, posts }, revalidate: 30 };
 }
 
-const GuideService = ({ page }) => {
+const GuideService = ({ page, posts }) => {
   return (
     <>
       <Head>
@@ -23,7 +25,15 @@ const GuideService = ({ page }) => {
           width={1000}
           height={750}
         />
-        <PageContent content={page} />
+        <PageContent content={page} className="" />
+        <section className="mt-10">
+          <h2 className="px-5 text-2xl font-extrabold">/ 已完成的行程</h2>
+          <section>
+            {posts.map((post) => (
+              <Card content={post} key={post.id} />
+            ))}
+          </section>
+        </section>
       </section>
     </>
   );

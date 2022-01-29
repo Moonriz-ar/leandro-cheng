@@ -1,5 +1,7 @@
+import Head from "next/head";
+import Card from "../../components/Card";
+
 import { getAllPosts } from "../../lib/ghost";
-import Link from "next/link";
 
 export async function getStaticProps() {
   const posts = await getAllPosts();
@@ -8,23 +10,22 @@ export async function getStaticProps() {
 
 const Blog = ({ posts }) => {
   return (
-    <>
-      <h1>Blog posts</h1>
-      <h2>Blog posts by theme</h2>
-      <h2>Blog posts by country</h2>
-      <h2>All blog posts</h2>
-      <ul>
-        {posts.map((post) => {
-          return (
-            <li key={post.id}>
-              <Link href={`/blog/${post.slug}`}>
-                <a>{post.title}</a>
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
-    </>
+    <section className="flex flex-col justify-center pb-10 mt-10 bg-gray-100">
+      <Head>
+        <title>所有文章</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+
+      <section className="mt-10">
+        <h1 className="px-5 text-2xl font-extrabold">/ 所有文章</h1>
+      </section>
+
+      <section>
+        {posts
+          ? posts.map((post) => <Card content={post} key={post.id} />)
+          : null}
+      </section>
+    </section>
   );
 };
 
