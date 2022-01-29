@@ -1,11 +1,13 @@
 import Link from "next/link";
 import { countryNavLinks, categoryNavLinks } from "../../lib/NavLinks";
 
-const SecondaryNav = () => {
+const SecondaryNav = ({ handleClick }) => {
   const renderLinks = (array) => {
     return array.map((items) => (
       <Link href={`/tag/${items.path}`}>
-        <a className="py-1">{items.name}</a>
+        <a className="py-1" onClick={handleClick}>
+          {items.name}
+        </a>
       </Link>
     ));
   };
@@ -31,7 +33,9 @@ const SecondaryNav = () => {
         <div className="flex flex-col">
           {renderLinks(categoryNavLinks)}
           <Link href="/blog">
-            <a className="py-1">所有文章</a>
+            <a className="py-1" onClick={handleClick}>
+              所有文章
+            </a>
           </Link>
         </div>
       </section>

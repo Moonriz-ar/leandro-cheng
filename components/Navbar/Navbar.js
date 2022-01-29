@@ -12,7 +12,7 @@ const Navbar = () => {
   };
 
   const renderSecondaryNav = () => {
-    return <SecondaryNav />;
+    return <SecondaryNav handleClick={handleClick} />;
   };
 
   return (

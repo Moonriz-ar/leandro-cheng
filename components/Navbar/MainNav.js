@@ -14,7 +14,7 @@ const MainNav = ({ handleClick }) => {
       <div>
         <ul className="flex">
           <li>
-            <div className="ml-3 hover:tex t-gray-600" onClick={handleClick}>
+            <div className="ml-3 hover:text-gray-600" onClick={handleClick}>
               部落格<i class="fas fa-caret-down"></i>
             </div>
           </li>
