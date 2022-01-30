@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Head from "next/head";
 
-import profilePic from "../public/images/profile.jpg";
+import profilePic from "../public/images/profile-rectangle.jpg";
 import { getSinglePage } from "../lib/ghost";
 import PageContent from "../components/PageContent";
 
@@ -18,11 +18,13 @@ const About = ({ page }) => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <section className="flex flex-col justify-center pb-10 mt-10 bg-gray-100">
-        <Image
-          src={profilePic}
-          alt="photo of Leandro Cheng"
-          className="object-cover object-top w-auto h-auto min-w-full min-h-full"
-        />
+        <div className="mx-auto md:max-w-sm">
+          <Image
+            src={profilePic}
+            alt="photo of Leandro Cheng"
+            className="object-cover object-top w-auto h-auto min-w-full min-h-full "
+          />
+        </div>
         <PageContent content={page} />
       </section>
     </>
