@@ -10,7 +10,9 @@ const Hero = () => {
         <p className="mb-1">Leandro Cheng 專業攝影嚮導</p>
         <p className="mb-6">為每位客戶量身打造專有行程</p>
         <Link href="/guide-service">
-          <a className="px-2 py-1 font-extrabold border rounded">了解更多</a>
+          <a className="px-2 py-1 font-extrabold border rounded hover:text-gray-50">
+            了解更多
+          </a>
         </Link>
       </div>
     </header>
