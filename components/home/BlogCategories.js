@@ -10,9 +10,11 @@ const BlogCategories = () => {
     ));
   };
   return (
-    <section className="pb-10">
+    <section className="pb-10 md:w-10/12 md:mx-auto">
       <h2 className="px-5 text-2xl font-extrabold">/ 文章類別</h2>
-      <section>{renderCards(countryNavLinks)}</section>
+      <section className="flex flex-col flex-wrap md:flex-row">
+        {renderCards(countryNavLinks)}
+      </section>
     </section>
   );
 };

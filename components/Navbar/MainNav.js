@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const MainNav = ({ handleClick }) => {
   return (
-    <nav className="flex justify-between w-screen px-4 py-3 text-sm font-extrabold text-gray-800 bg-gray-50 drop-shadow md:px-32">
+    <nav className="flex justify-between w-screen px-4 py-3 text-sm font-extrabold text-gray-800 bg-gray-50 drop-shadow md:px-40 md:text-base">
       <div className="">
         <Link href="/">
           <a className="inline-block hover:text-gray-500">

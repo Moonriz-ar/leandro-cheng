@@ -2,13 +2,13 @@ import Script from "next/script";
 
 const Footer = () => {
   return (
-    <footer className="sticky pt-3 bg-gray-100 top-full">
+    <footer className="sticky pt-3 bg-gray-900 top-full">
       <Script
         src="https://kit.fontawesome.com/3552e4e004.js"
         crossorigin="anonymous"
       ></Script>
 
-      <div className="z-10 p-3 m-4 prose prose-h3:text-lg rounded-xl bg-gray-50 drop-shadow-2xl">
+      <div className="z-10 p-3 m-4 mx-4 prose bg-gray-100 prose-h3:text-lg rounded-xl drop-shadow-2xl md:p-8 md:mx-auto">
         <h3 className="mb-3 font-bold">聯絡方式</h3>
         <ul className="pl-0 text-sm list-none">
           <li>
@@ -29,7 +29,7 @@ const Footer = () => {
             <a
               target="_blank"
               href="https://www.facebook.com/LeandroCheng"
-              className="no-underline"
+              className="no-underline hover:text-gray-500"
             >
               <i class="fab fa-facebook-square"></i> Facebook Messenger
             </a>
@@ -37,7 +37,7 @@ const Footer = () => {
         </ul>
       </div>
 
-      <div className="px-4 py-4 text-xs text-gray-200 bg-gray-900">
+      <div className="px-4 py-4 text-xs text-gray-200 bg-gray-900 md:text-sm">
         <p className="text-center">
           © 2012–2022 Leandro Cheng Blog. All rights reserved.
         </p>
@@ -46,7 +46,7 @@ const Footer = () => {
           <a
             href="https://github.com/Moonriz-ar"
             target="_blank"
-            className="font-extrabold no-underline"
+            className="font-extrabold no-underline hover:text-gray-50"
           >
             Andrea Lin
           </a>

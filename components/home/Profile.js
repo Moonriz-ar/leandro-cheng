@@ -4,7 +4,7 @@ import profilePic from "../../public/images/profile.jpg";
 
 const Profile = () => {
   return (
-    <section className="flex flex-col justify-center py-10 pb-10 md:flex-row md:px-20 md:items-center">
+    <section className="flex flex-col justify-center py-10 pb-10 md:flex-row md:w-10/12 md:mx-auto md:items-center">
       <div className="md:max-w-sm">
         <Image
           src={profilePic}
