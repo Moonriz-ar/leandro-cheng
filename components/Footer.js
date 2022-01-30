@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Script from "next/script";
 
 const Footer = () => {
@@ -27,11 +26,13 @@ const Footer = () => {
             Leandro-Cheng)
           </li>
           <li>
-            <Link href="https://www.facebook.com/LeandroCheng">
-              <a className="no-underline">
-                <i class="fab fa-facebook-square"></i> Facebook Messenger
-              </a>
-            </Link>
+            <a
+              target="_blank"
+              href="https://www.facebook.com/LeandroCheng"
+              className="no-underline"
+            >
+              <i class="fab fa-facebook-square"></i> Facebook Messenger
+            </a>
           </li>
         </ul>
       </div>
@@ -42,9 +43,13 @@ const Footer = () => {
         </p>
         <p className="text-center">
           Made with ❤ by{" "}
-          <Link href="https://github.com/Moonriz-ar">
-            <a className="font-extrabold no-underline">Andrea Lin</a>
-          </Link>
+          <a
+            href="https://github.com/Moonriz-ar"
+            target="_blank"
+            className="font-extrabold no-underline"
+          >
+            Andrea Lin
+          </a>
         </p>
       </div>
     </footer>

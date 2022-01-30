@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 
 import profilePic from "../../public/images/profile.jpg";
 
@@ -50,11 +49,13 @@ const Profile = () => {
               Leandro-Cheng)
             </li>
             <li>
-              <Link href="https://www.facebook.com/LeandroCheng">
-                <a className="no-underline hover:text-gray-500">
-                  <i class="fab fa-facebook-square"></i> Facebook Messenger
-                </a>
-              </Link>
+              <a
+                target="_blank"
+                href="https://www.facebook.com/LeandroCheng"
+                className="no-underline hover:text-gray-500"
+              >
+                <i class="fab fa-facebook-square"></i> Facebook Messenger
+              </a>
             </li>
           </ul>
         </section>
