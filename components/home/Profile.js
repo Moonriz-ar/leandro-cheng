@@ -34,18 +34,21 @@ const Profile = () => {
           <h3 className="mb-3 font-bold">聯絡方式</h3>
           <ul className="pl-0 text-sm list-none">
             <li>
-              <i class="far fa-envelope"></i> Email: naihao@hotmail.com
+              <i class="far fa-envelope"></i>{" "}
+              <span className="font-bold">Email:</span> naihao@hotmail.com
             </li>
             <li>
-              <i class="fab fa-line"></i> Line: +54 11 5995-0361 (ID:
+              <i class="fab fa-line"></i>{" "}
+              <span className="font-bold">Line:</span> +54 11 5995-0361 (ID:
               leandro_cheng)
             </li>
             <li>
-              <i class="fab fa-whatsapp-square"></i> ​WhatsApp: +54 9 11
-              5995-0361
+              <i class="fab fa-whatsapp-square"></i> ​
+              <span className="font-bold">WhatsApp:</span> +54 9 11 5995-0361
             </li>
             <li>
-              <i class="fab fa-weixin"></i> ​WeChat: +5491159950361 (ID:
+              <i class="fab fa-weixin"></i>{" "}
+              <span className="font-bold">​WeChat:</span> +5491159950361 (ID:
               Leandro-Cheng)
             </li>
             <li>
