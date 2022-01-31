@@ -12,7 +12,7 @@ const BlogContent = ({ content }) => {
         </span>
         {content.tags.map((tag) => (
           <Link key={tag.id} href={`/tag/${tag.slug}`}>
-            <a className="px-2 py-1 mr-2 text-sm text-gray-200 no-underline bg-gray-800 rounded-xl">
+            <a className="px-2 py-1 mr-2 text-sm text-gray-200 no-underline bg-gray-800 rounded-xl md:text-base">
               {tag.name}
             </a>
           </Link>
@@ -22,7 +22,7 @@ const BlogContent = ({ content }) => {
   };
 
   return (
-    <article className="z-10 p-5 mx-4 -mt-8 prose rounded-lg bg-gray-50 drop-shadow-lg">
+    <article className="z-10 p-5 mx-4 -mt-8 prose rounded-lg bg-gray-50 drop-shadow-lg md:w-10/12 md:mx-auto md:prose-xl md:-mt-80 md:p-10">
       <Script
         src="https://kit.fontawesome.com/3552e4e004.js"
         crossorigin="anonymous"

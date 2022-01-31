@@ -25,10 +25,13 @@ const GuideService = ({ page, posts }) => {
           width={1000}
           height={750}
         />
-        <PageContent content={page} />
+        <div className="md:-mt-80">
+          <PageContent content={page} />
+        </div>
+
         <section className="mt-10 md:w-10/12 md:mx-auto">
           <h2 className="px-5 text-2xl font-extrabold">/ 已完成的行程</h2>
-          <section className="flex flex-col items-stretch md:flex-row">
+          <section className="grid md:grid-cols-4 md:items-stretch">
             {posts.map((post) => (
               <Card content={post} key={post.id} />
             ))}

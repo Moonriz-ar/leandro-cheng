@@ -25,20 +25,23 @@ export async function getStaticProps({ params }) {
 // render tag page
 export default function Tag({ posts, tagData }) {
   return (
-    <section className="flex flex-col justify-center pb-10 mt-10 bg-gray-100">
+    <section className="pt-10 pb-10 bg-gray-100 ">
       <Head>
         <title>{tagData.name}</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
 
-      <section className="mt-10">
+      <section className="pt-10 md:w-10/12 md:mx-auto">
         <h1 className="px-5 text-2xl font-extrabold">/ {tagData.name}文章</h1>
-      </section>
-
-      <section>
-        {posts
-          ? posts.map((post) => <Card content={post} key={post.id} />)
-          : null}
+        <section className="grid md:grid-cols-4 md:items-stretch md:gap-y-2.5">
+          {posts
+            ? posts.map((post) => (
+                <div>
+                  <Card content={post} key={post.id} />
+                </div>
+              ))
+            : null}
+        </section>
       </section>
     </section>
   );
