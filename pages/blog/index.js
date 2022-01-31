@@ -16,14 +16,13 @@ const Blog = ({ posts }) => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
 
-      <section className="mt-10">
+      <section className="mt-10 md:w-10/12 md:mx-auto">
         <h1 className="px-5 text-2xl font-extrabold">/ 所有文章</h1>
-      </section>
-
-      <section>
-        {posts
-          ? posts.map((post) => <Card content={post} key={post.id} />)
-          : null}
+        <section className="grid md:grid-cols-4 md:items-stretch md:gap-y-2.5">
+          {posts
+            ? posts.map((post) => <Card content={post} key={post.id} />)
+            : null}
+        </section>
       </section>
     </section>
   );
