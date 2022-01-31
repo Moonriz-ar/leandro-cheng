@@ -7,11 +7,9 @@
     Un remake del travel blog de mi tio, Leandro Cheng. Es una pagina responsive, utilizando Ghost headless CMS hosteado en Heroku para brindar un dashboard intuitivo para podes publicar post de blogs. Por otro lado, para el front se utilizó Next.js hosteado en Vercel para consumir los API generados por Ghost y generar los contenidos estáticos con ISR (incremental server side rendering). Para los estilos se utilizó Tailwind.
     <br />
     <br />
-    <a href="https://leandro-cheng.vercel.app/">Ver Demo</a>
+    * [Ver Demo](https://leandro-cheng.vercel.app/)
+    * [Ver blog original](https://www.leandrocheng.com/)
     
-    <br />
-    <br />
-    <a href="https://www.leandrocheng.com/">Ver blog original</a>
   </p>
 </div>
 
