@@ -13,6 +13,7 @@
 
 * [Ver Demo](https://leandro-cheng.vercel.app/)
 * [Ver blog original](https://www.leandrocheng.com/)
+* [Referencias y feature roadmap](https://alert-milk-258.notion.site/Leandro-Travel-Blog-ad8c881778e04d01b4ec1f68d9bcfe2c)
 
 <br />
 </div>
